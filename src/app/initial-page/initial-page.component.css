@@ -1,0 +1,17 @@
+.carousel{
+    width: 30%;
+}
+.asd{
+    display: flex;
+    margin: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buscador{
+    display: inline-block;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    align-content: center;
+    align-items: right;
+}
