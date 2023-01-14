@@ -14,4 +14,10 @@
     margin-bottom: 10px;
     align-content: center;
     align-items: right;
+    margin-top: 55px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
 }

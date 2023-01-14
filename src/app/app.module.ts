@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InitialPageComponent } from './initial-page/initial-page.component';
 import { CardComponent } from './card/card.component';
 import { ShoppingCarComponent } from './shopping-car/shopping-car.component';
+import { SesionComponent } from './sesion/sesion.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ShoppingCarComponent } from './shopping-car/shopping-car.component';
     InitialPageComponent,
     CardComponent,
     ShoppingCarComponent,
+    SesionComponent,
   ],
   imports: [
     BrowserModule,
