@@ -9,6 +9,8 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
 import { CardComponent } from './card/card.component';
 import { ShoppingCarComponent } from './shopping-car/shopping-car.component';
 import { SesionComponent } from './sesion/sesion.component';
+import { PayBooksPageComponent } from './pay-books-page/pay-books-page.component';
+import { PayBookCardComponent } from './pay-book-card/pay-book-card.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { SesionComponent } from './sesion/sesion.component';
     CardComponent,
     ShoppingCarComponent,
     SesionComponent,
+    PayBooksPageComponent,
+    PayBookCardComponent,
   ],
   imports: [
     BrowserModule,

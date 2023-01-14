@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,10 @@ import { Component} from '@angular/core';
   templateUrl: './initial-page.component.html',
   styleUrls: ['./initial-page.component.css'],
 })
-export class InitialPageComponent{
+export class InitialPageComponent implements OnInit{
+  ngOnInit(): void {
+    console.log(this.books);
+  }
 
   books = [
     {
