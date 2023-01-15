@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs';
+import { Book } from '../interfaces/book';
 @Injectable({
   providedIn: 'root'
 })
 export class ContadorService {
 
-  libro:{id:number,src:string,title:string,description:string}={
+  libro:Book={
     id: 0,
     src: '',
     title: '',
-    description: ''
+    description: '',
+    price: 0
   };
-  private enviarMensajeSubject = new Subject<{id:number,src:string,title:string,description:string}>();
+  private enviarMensajeSubject = new Subject<Book>();
   enviarMensajeObservable = this.enviarMensajeSubject.asObservable();
   constructor() { }
 
-  enviarMensaje(libro:{id:number,src:string,title:string,description:string}){
+  enviarMensaje(libro:Book){
     this.libro=libro; 
     this.enviarMensajeSubject.next(this.libro);
   }

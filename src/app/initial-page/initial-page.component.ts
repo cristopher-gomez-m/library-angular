@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { Book } from '../interfaces/book';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class InitialPageComponent implements OnInit{
     console.log(this.books);
   }
 
-  books = [
+  books : Book[]= [
     {
       id: 1,
       src: 'https://www.elejandria.com/covers/Don_Quijote_de_la_Mancha-Cervantes_Miguel-lg.png',
@@ -20,6 +21,7 @@ export class InitialPageComponent implements OnInit{
       `El ingenioso hidalgo don Quijote de la Mancha narra las aventuras de Alonso Quijano, 
       un hidalgo pobre que de tanto leer novelas de caballería acaba enloqueciendo y creyendo 
       ser un caballero andante, nombrándose a sí mismo como don Quijote de la Mancha.`,
+      price: 15.90,
     },
     {
       id: 2,
@@ -27,6 +29,7 @@ export class InitialPageComponent implements OnInit{
       title: 'Harry Potter y la piedra filosofal',
       description: `En esta primera obra se introducen la mayoría de los personajes principales de la serie, 
       así como muchos de los lugares donde se desarrollará la acción.`,
+      price: 18.50,
     },
   ];
 

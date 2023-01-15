@@ -1,19 +1,41 @@
 <p>pay-books-page works!</p>
 
-<div *ngIf="asd.length<=0">
+<div *ngIf="books.length<=0">
   <h2>No hay datos</h2>
 </div>
-<table *ngIf="asd.length >0">
+<table *ngIf="books.length >0">
   <thead>
-      <tr>
-          <th>artículo</th>
-          <th>titulo</th>
-          <th>precio</th>
-      </tr>
+    <tr>
+      <th>artículo</th>
+      <th>título</th>
+      <th>precio</th>
+      <th></th>
+    </tr>
   </thead>
-  <tbody>
-    <div *ngFor="let item of asd;">
-      <app-pay-book-card [libro]="item"></app-pay-book-card>
-    </div>
+  <tbody >
+    <tr *ngFor="let item of books;">
+      <td>
+        <img src={{item.src}} style="width:15vh;height:10vh;" class="card-img-top" alt="...">
+    </td>
+      <td>{{item.title}} </td>
+    </tr>
   </tbody>
 </table>
+<!--
+<table *ngIf="asd.length >0">
+  <thead>
+    <tr>
+      <th>artículo</th>
+      <th class="mi-clase-izquierda">titulo</th>
+      <th>precio</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let item of asd;">
+      <app-pay-book-card [libro]="item"></app-pay-book-card>
+    </tr>
+
+  </tbody>
+</table>
+-->

@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { Navigation, Router } from '@angular/router';
+import { Book } from '../interfaces/book';
 
 @Component({
   selector: 'app-pay-books-page',
@@ -9,29 +10,29 @@ import { Navigation, Router } from '@angular/router';
 export class PayBooksPageComponent  {
   
   
-  nav: any;
-  libros: any;
-  asd: { id: number; src: string; title: string; description: string;}[] = [];
+  navigation: any;
+  booksQueryParams: any;
+  books: Book[] = [];
   constructor(private router: Router) { 
     
-    this.nav = this.router.getCurrentNavigation();
-    this.libros = this.nav.extras.state;
+    this.navigation = this.router.getCurrentNavigation();
+    this.booksQueryParams = this.navigation.extras.state;
   
-    if (this.libros != null)
+    if (this.booksQueryParams != null)
     {     
       
-      console.log(this.libros.booksToPay.queryParams['libros']);
-      this.libros.booksToPay.queryParams['libros'].forEach((element: any)=>{
-        this.asd.push(element);
+      
+      this.booksQueryParams.booksToPay.queryParams['libros'].forEach((element: any)=>{
+        this.books.push(element);
       })
-      this.asd.forEach(element=>{
+      this.books.forEach(element=>{
         console.log(element.id);
       })
       /*
-      console.log(this.asd);
-      console.log(this.asd[0]);
+      console.log(this.books);
+      console.log(this.books[0]);
       this.libros.booksToPay.queryParams['libros']
-      this.asd.push(this.libros.booksToPay.queryParams.libros);
+      this.books.push(this.libros.booksToPay.queryParams.libros);
       */
     }
     

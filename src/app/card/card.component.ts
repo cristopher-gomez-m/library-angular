@@ -1,4 +1,5 @@
 import { Component, Input,OnInit } from '@angular/core';
+import { Book } from '../interfaces/book';
 import { ContadorService } from '../services/contador.service';
 
 @Component({
@@ -10,9 +11,9 @@ export class CardComponent implements OnInit{
   constructor(private servicioComunicacion: ContadorService){}
   ngOnInit(): void {
   }
-  @Input() libro!:{id:number,src:string,title:string,description:string};
+  @Input() libro!:Book;
 
-  comprar(libro:{id:number,src:string,title:string,description:string}){
+  comprar(libro:Book){
     this.servicioComunicacion.enviarMensaje(libro);
     console.log(libro)
   }
