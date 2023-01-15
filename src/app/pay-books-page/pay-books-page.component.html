@@ -3,24 +3,33 @@
 <div *ngIf="books.length<=0">
   <h2>No hay datos</h2>
 </div>
-<table *ngIf="books.length >0">
-  <thead>
-    <tr>
-      <th>artículo</th>
-      <th>título</th>
-      <th>precio</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody >
-    <tr *ngFor="let item of books;">
-      <td>
-        <img src={{item.src}} style="width:15vh;height:10vh;" class="card-img-top" alt="...">
-    </td>
-      <td>{{item.title}} </td>
-    </tr>
-  </tbody>
-</table>
+<div class="container" *ngIf="books.length >0">
+  <table>
+    <thead>
+      <tr>
+        <th>artículo</th>
+        <th>título</th>
+        <th>precio</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of books;">
+        <td>
+          <img src={{item.src}} style="width:15vh;height:10vh;" class="card-img-top" alt="...">
+        </td>
+        <td>{{item.title}} </td>
+        <td>${{item.price}} </td>
+        <td> 
+          <button>eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="books">
+    <app-price-card [books]="books"></app-price-card>
+  </div>
+</div>
 <!--
 <table *ngIf="asd.length >0">
   <thead>

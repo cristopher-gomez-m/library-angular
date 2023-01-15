@@ -7,11 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InitialPageComponent } from './initial-page/initial-page.component';
 import { CardComponent } from './card/card.component';
-import { ShoppingCarComponent } from './shopping-car/shopping-car.component';
 import { SesionComponent } from './sesion/sesion.component';
-import { PayBooksPageComponent } from './pay-books-page/pay-books-page.component';
 import { PayBookCardComponent } from './pay-book-card/pay-book-card.component';
-
+import { ShoppingCarModule } from './shopping-car/shopping-car.module';
+import { ShoppingCarComponent } from './shopping-car/shopping-car.component';
 
 @NgModule({
   declarations: [
@@ -19,15 +18,15 @@ import { PayBookCardComponent } from './pay-book-card/pay-book-card.component';
     HeaderComponent,
     InitialPageComponent,
     CardComponent,
-    ShoppingCarComponent,
     SesionComponent,
-    PayBooksPageComponent,
     PayBookCardComponent,
+    ShoppingCarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ShoppingCarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

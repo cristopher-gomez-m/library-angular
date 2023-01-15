@@ -1,4 +1,8 @@
-.mi-clase-izquierda{
-    text-align: left;
-    align-content: left;
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+td,th{
+    padding: 1rem;
 }
