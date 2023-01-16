@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book } from '../interfaces/book';
+import { ContadorService } from '../services/contador.service';
 
 @Component({
   selector: 'app-price-card',
@@ -10,12 +12,17 @@ export class PriceCardComponent implements OnInit{
   ngOnInit(): void {
     this.getValue();
   }
-  
+  constructor(private servicioComunicacion: ContadorService,private router: Router){}
   @Input() books:Book[]=[];
   valueToPay:number=0;
   getValue(){
     this.books.forEach(book=>{
       this.valueToPay+= book.price;
     });
+  }
+
+  pagar(){
+    this.servicioComunicacion.resetBooks();
+    this.router.navigateByUrl("/")
   }
 }

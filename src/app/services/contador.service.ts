@@ -33,4 +33,8 @@ export class ContadorService {
     this.enviarMensajeSubject.next(this.books);
     console.log(this.books);
   }
+  resetBooks(){
+    this.books=[];
+    this.enviarMensajeSubject.next(this.books);
+  }
 }
