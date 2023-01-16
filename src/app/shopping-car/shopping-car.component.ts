@@ -8,16 +8,17 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class ShoppingCarComponent implements OnInit {
   
-  libros:{id:number,src:string,title:string,description:string}[]=[];
-  
+  //libros:{id:number,src:string,title:string,description:string}[]=[];
+  numeroLibros:number=0;
   constructor(private servicioComunicacion: ContadorService,private router: Router){}
   ngOnInit(): void {
     this.servicioComunicacion.enviarMensajeObservable.subscribe(response=>{
-      this.libros.push(response);
+      this.numeroLibros=response.length;
      })
   }
 
   prueba(){
+    /*
     let objToSend: NavigationExtras ={
       queryParams:{
         libros: this.libros
@@ -25,9 +26,9 @@ export class ShoppingCarComponent implements OnInit {
       skipLocationChange: false,
       fragment: 'top' 
     }
-    console.log(this.libros);
     console.log(objToSend.queryParams!['libros']);
     this.redirectTo('/payBooks', objToSend);
+    */
   }
 
   redirectTo(uri:string, objToSend:NavigationExtras){

@@ -14,7 +14,7 @@ export class CardComponent implements OnInit{
   @Input() libro!:Book;
 
   comprar(libro:Book){
-    this.servicioComunicacion.enviarMensaje(libro);
+    this.servicioComunicacion.añadirLibro(libro);
     console.log(libro)
   }
 }

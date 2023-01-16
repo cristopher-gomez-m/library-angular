@@ -6,6 +6,8 @@ import { Book } from '../interfaces/book';
 })
 export class ContadorService {
 
+  books:Book[]=[];
+  /*
   libro:Book={
     id: 0,
     src: '',
@@ -13,12 +15,22 @@ export class ContadorService {
     description: '',
     price: 0
   };
-  private enviarMensajeSubject = new Subject<Book>();
+  */
+  private enviarMensajeSubject = new Subject<Book[]>();
   enviarMensajeObservable = this.enviarMensajeSubject.asObservable();
   constructor() { }
 
-  enviarMensaje(libro:Book){
-    this.libro=libro; 
-    this.enviarMensajeSubject.next(this.libro);
+  añadirLibro(libro:Book){
+    this.books.push(libro); 
+    this.enviarMensajeSubject.next(this.books);
+    console.log(this.books);
+  }
+  getBooks() {
+    return this.books;
+  }
+  eliminarLibro(id:number){
+    this.books.splice(id,1);
+    this.enviarMensajeSubject.next(this.books);
+    console.log(this.books);
   }
 }
