@@ -18,9 +18,10 @@
             <app-shopping-car></app-shopping-car>
           </li>
         </ul>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          Iniciar sesión
-        </button>
+  
+          <button class="btn btn-primary" data-bs-toggle="modal" *ngIf="correoUsuario!=''" (click)="unlogin()"> unlogin </button>
+          <button  class="btn btn-primary" data-bs-toggle="modal" *ngIf="correoUsuario===''" (click)="openDialogSesion()"> login </button>
+        
       </div>
     </div>
   </nav>
