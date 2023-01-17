@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InitialPageComponent } from './initial-page/initial-page.component';
 import { PayBooksPageComponent } from './pay-books-page/pay-books-page.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 import { SesionComponent } from './sesion/sesion.component';
 
 const routes: Routes = [
@@ -9,6 +10,7 @@ const routes: Routes = [
   {path:'home',component:InitialPageComponent},
   {path:'sesion',component:SesionComponent},
   {path:'payBooks',component:PayBooksPageComponent},
+  {path:'search',component:SearchPageComponent}
 ];
 
 @NgModule({

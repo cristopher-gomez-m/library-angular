@@ -20,6 +20,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { SearchEngineComponent } from './search-engine/search-engine.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { SearchEngineComponent } from './search-engine/search-engine.component';
     ShoppingCarComponent,
     LoginComponent,
     SearchEngineComponent,
+    SearchPageComponent,
   ],
   imports: [
     BrowserModule,
