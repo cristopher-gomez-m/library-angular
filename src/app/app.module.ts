@@ -18,7 +18,8 @@ import {MatCardModule} from '@angular/material/card'
 import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { FormsModule } from '@angular/forms';
+import { SearchEngineComponent } from './search-engine/search-engine.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     SesionComponent,
     ShoppingCarComponent,
     LoginComponent,
+    SearchEngineComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatToolbarModule,
     MatIconModule,
     MatDialogModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
